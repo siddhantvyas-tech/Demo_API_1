@@ -2,7 +2,6 @@ package com.example.demo.model;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -12,8 +11,8 @@ import java.util.UUID;
 public class Student {
 
     @Id
-    @Column(columnDefinition = "uuid", updatable = false)
-    private UUID studentId;
+    @GeneratedValue
+    private int studentId;
     private String name;
     private String contact;
     private String email;
@@ -21,27 +20,11 @@ public class Student {
     private String address;
     private String marks;
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getMarks() {
-        return marks;
-    }
-
-    public void setMarks(String marks) {
-        this.marks = marks;
-    }
-
-    public UUID getStudentId() {
+    public int getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(UUID studentId) {
+    public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
 
@@ -75,5 +58,21 @@ public class Student {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getMarks() {
+        return marks;
+    }
+
+    public void setMarks(String marks) {
+        this.marks = marks;
     }
 }

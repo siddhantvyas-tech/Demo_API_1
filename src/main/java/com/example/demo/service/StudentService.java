@@ -20,7 +20,7 @@ public class StudentService {
         return studrepo.save(student);
     }
 
-    public Student getStudent(UUID id)
+    public Student getStudent(int id)
     {
         return studrepo.findById(id).orElse(null);
     }
@@ -42,7 +42,7 @@ public class StudentService {
         return studrepo.save(existingstudent);
     }
 
-    public String deleteStudent(UUID id)
+    public String deleteStudent(int id)
     {
         studrepo.deleteById(id);
         return "Student Removed"+id;

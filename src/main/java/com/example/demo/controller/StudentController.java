@@ -27,7 +27,7 @@ public class StudentController {
     }
 
     @GetMapping("/getStudentById/{id}")
-    public Student findStudent(@PathVariable UUID id)
+    public Student findStudent(@PathVariable int id)
     {
         return studservice.getStudent(id);
     }
@@ -45,7 +45,7 @@ public class StudentController {
     }
 
     @DeleteMapping("/deleteStudent/{id}")
-    public String deleteStudent(@PathVariable UUID id)
+    public String deleteStudent(@PathVariable int id)
     {
         return studservice.deleteStudent(id);
     }
