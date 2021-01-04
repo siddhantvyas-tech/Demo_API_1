@@ -1,6 +1,6 @@
-package com.example.repository;
+package com.example.demo.repository;
 
-import com.example.model.Student;
+import com.example.demo.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

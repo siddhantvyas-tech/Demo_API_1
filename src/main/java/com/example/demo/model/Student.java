@@ -1,5 +1,8 @@
-package com.example.model;
+package com.example.demo.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,7 +12,7 @@ import java.util.UUID;
 public class Student {
 
     @Id
-    @GeneratedValue
+    @Column(columnDefinition = "uuid", updatable = false)
     private UUID studentId;
     private String name;
     private String contact;

@@ -1,7 +1,7 @@
-package com.example.controller;
+package com.example.demo.controller;
 
-import com.example.model.Student;
-import com.example.service.StudentService;
+import com.example.demo.model.Student;
+import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +13,12 @@ public class StudentController {
 
     @Autowired
     private StudentService studservice;
+
+    @GetMapping("/")
+    public String index()
+    {
+        return "Hello there";
+    }
 
     @PostMapping("/addStudent")
     public Student addStudent(@RequestBody Student student)
