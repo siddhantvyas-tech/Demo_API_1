@@ -1,7 +1,5 @@
 package com.example.demo.model;
 
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,7 +9,7 @@ import javax.persistence.Id;
 public class Student {
     @Id
     @GeneratedValue
-    private int studentId;
+    private int studentid;
     private String name;
     private String contact;
     private String email;
@@ -19,12 +17,12 @@ public class Student {
     private String address;
     private String marks;
 
-    public int getStudentId() {
-        return studentId;
+    public int getStudentid() {
+        return studentid;
     }
 
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
+    public void setStudentid(int studentId) {
+        this.studentid = studentId;
     }
 
     public String getName() {

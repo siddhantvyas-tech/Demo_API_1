@@ -31,7 +31,7 @@ public class StudentService {
 
     public Student updateStudent(Student student)
     {
-        Student existingstudent = studrepo.findById(student.getStudentId()).orElse(null);
+        Student existingstudent = studrepo.findById(student.getStudentid()).orElse(null);
         existingstudent.setName(student.getName());
         existingstudent.setAddress(student.getAddress());
         existingstudent.setContact(student.getContact());
